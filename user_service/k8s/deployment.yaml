@@ -17,7 +17,7 @@ spec:
         group: db
     spec:
       containers:     # defines a running container inside the Pod
-        - name: user-service
+        - name: user_service
           image: divyajyotidas15/user-service-image:1.0.0.0
 
           ports:

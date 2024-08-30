@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:  
               service:
-                name: user-service
+                name: user_service
                 port:
                   number: 8770
