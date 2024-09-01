@@ -40,14 +40,14 @@ requirements = [
 
     ]
 # Retrieve package list
-PACKAGES = (find_namespace_packages(include=["user_service*"], exclude=['tests']))
+PACKAGES = (find_namespace_packages(include=["users*"], exclude=['tests']))
 
 # Add extra virtual shortened package for each of namespace_pkgs
 namespace_pkgs = ["users"]
 
 # Run python setup
 setup(
-    name="user_service",
+    name="users",
     version="1.0.6",
     description=(
         "user service pip package"
