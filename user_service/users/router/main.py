@@ -15,5 +15,6 @@ async def root(name: str):
 
 @app.post("/api/user/register")
 async def register(user: UserTableSchema):
-    RegisterService().register_user(user)
+    if RegisterService().register_user(user):
+        return "User registered"
 

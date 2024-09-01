@@ -1,3 +1,4 @@
+import uuid
 from typing import List
 from typing import Optional
 from sqlalchemy import ForeignKey
@@ -17,6 +18,11 @@ class UserTable(Base):
     username: Mapped[str] = mapped_column(String(30))
     email: Mapped[Optional[str]]
     password: Mapped[Optional[str]]
+
+    def set_user(self, values):
+        self.username = values.username
+        self.email = values.email
+        self.password = values.password
 
     def __repr__(self) -> str:
         return f"User(id={self.id!r}, username={self.username!r}, email={self.email!r}, password={self.password!r})"

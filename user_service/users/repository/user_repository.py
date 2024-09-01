@@ -20,7 +20,8 @@ class UserRepository(object):
         self.session.commit()
 
 
-    def users_create(self, user):
+    def users_create(self, values):
+        user = models.UserTable().set_user(values)
         self.session.add(user)
         self.session.commit()
         return user

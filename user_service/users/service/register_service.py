@@ -5,9 +5,6 @@ class RegisterService(object):
         pass
 
     def register_user(self, user):
-        user_obj = User(username=user.username,
-                        email=user.email,
-                        password=user.password)
-        if user_obj.user_create():
+        if User().user_create(user):
             return "Registered successfully."
         return "User already exists."
